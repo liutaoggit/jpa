@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="Student_details"
+		transaction-type="RESOURCE_LOCAL">
+<!-- 		<class>jpa1.domain.Library</class> -->
+<!-- 		<class>jpa1.domain.StudentEntity</class> -->
+<!-- 		<class>jpa1.domain.Subject</class> -->
+<!-- 		<class>jpa1.domain.Employee</class> -->
+<!-- 		<class>jpa1.domain.Person</class> -->
+<!-- 		<class>jpa1.domain.Book</class> -->
+<!-- 		<class>jpa1.domain.Father</class> -->
+<!-- 		<class>jpa1.domain.Child</class> -->
+			<class>jpa1.domain.Teacher</class>
+		<properties>
+			<!-- 数据库连接的基本信息 -->
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/testdb?serverTimezone=UTC" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="123" />
+			<!-- 配置 JPA 实现产品的基本属性，即 Hibernate 的基本属性 -->
+<!-- 			<property name="hibernate.show_sql" value="true" /> -->
+<!-- 			<property name="hibernate.format_sql" value="true" /> -->
+			<!-- <property name="hibernate.hbm2ddl.auto" value="update" /> -->
+			 <property name="eclipseink.logging.level" value="INFO" /> 
+<!-- 			<property name="eclipselink.ddl-generation" value="drop-and-create-tables" /> -->
+		</properties>
+
+	</persistence-unit>
+</persistence>
